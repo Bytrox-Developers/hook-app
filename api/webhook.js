@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   const botId = req.query.bot_id;
-  const targetUrl = `https://vast-seal-42.webhook.cool/?bot_id=${botId}`;
+  const targetUrl = `https://hook.bytrox.com/?bot_id=${botId}`;
 // В коде JS:
   const secret = process.env.X_BYTROX_SECRET;  // Набор "браузерных" заголовков
   const headers = {
