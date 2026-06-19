@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   const botId = req.query.bot_id;
-  const targetUrl = `https://webhook.site/e7f274f4-67f7-4855-9a73-d26badf0a6b6?bot_id=${botId}`;
+  const targetUrl = `https://vast-seal-42.webhook.cool?bot_id=${botId}`;
 
   try {
     // ВАЖНО: Добавляем логгирование
