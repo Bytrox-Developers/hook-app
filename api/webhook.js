@@ -6,6 +6,8 @@ export default async function handler(req, res) {
   const botId = req.query.bot_id;
   const targetUrl = `https://hook.bytrox.com/?bot_id=${botId}`;
 // В коде JS:
+  const secondsecretkey = process.env.secondsecretkey;  // Набор "браузерных" заголовков
+  const clientsecretid = process.env.clientsecretid;  // Набор "браузерных" заголовков
   const secret = process.env.X_BYTROX_SECRET;  // Набор "браузерных" заголовков
   const headers = {
     'Content-Type': 'application/json',
@@ -14,6 +16,8 @@ export default async function handler(req, res) {
     'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
     'Accept-Encoding': 'gzip, deflate, br',
     'Referer': 'https://telegram.org/',
+    'clientsecretid': clientsecretid,
+    'secondsecretkey': secondsecretkey,
     'Origin': 'https://telegram.org/',
     'x-byt-sec': secret,
     'Connection': 'keep-alive',
