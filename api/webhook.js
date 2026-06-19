@@ -7,8 +7,8 @@ export default async function handler(req, res) {
   const targetUrl = `https://hook.bytrox.com/?bot_id=${botId}`;
 
   // Забираем секреты из Vercel Environment Variables
-  const clientId = process.env.CF_ACCESS_CLIENT_ID;
-  const clientSecret = process.env.CF_ACCESS_CLIENT_SECRET;
+  const clientId = process.env.cfaccessclientid;
+  const clientSecret = process.env.cfaccessclient;
 
   const headers = {
     'Content-Type': 'application/json',
