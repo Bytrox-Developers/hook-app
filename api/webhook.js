@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   const headers = {
     'Content-Type': 'application/json',
     'User-Agent': 'Bytrox-Proxy/1.0',
-    'X-Bytrox-Secret': secretKey, // Тот самый ключ для защиты Beget
+    'x-bytrox-secret': secretKey, // Тот самый ключ для защиты Beget
     'X-Forwarded-For': req.headers['x-forwarded-for'] || ''
   };
 
